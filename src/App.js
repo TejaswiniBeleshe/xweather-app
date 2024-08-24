@@ -36,21 +36,21 @@ function App() {
         </div>
         <button onClick={fetchWeather}>Search</button>
       </div>
-      <div className="displayDiv">
+      <div className="weather-cards">
         {
-        load?<h5>Loading data...</h5>:cityWeather.hasOwnProperty("current")?<><div className="card">
+        load?<h5>Loading data...</h5>:cityWeather.hasOwnProperty("current")?<><div className="weather-card">
           <p>Temperature</p>
           <span>{cityWeather.current.temp_c}°C</span>
         </div>
-        <div className="card">
+        <div className="weather-card">
         <p>Humidity</p>
         <span>{cityWeather.current.humidity}%</span>
         </div>
-        <div className="card">
+        <div className="weather-card">
         <p>Condition</p>
         <span>{cityWeather.current.condition.text}</span>
         </div>
-        <div className="card">
+        <div className="weather-card">
         <p>Wind Speed</p>
         <span>{cityWeather.current.wind_kph}kph</span>
         </div></>:""
