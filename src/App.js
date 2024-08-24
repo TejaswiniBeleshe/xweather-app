@@ -38,7 +38,7 @@ function App() {
       </div>
       <div className="weather-cards">
         {
-        load?<h5>Loading data...</h5>:cityWeather.hasOwnProperty("current")?<><div className="weather-card">
+        load?<p>Loading data...</p>:cityWeather.hasOwnProperty("current")?<><div className="weather-card">
           <p>Temperature</p>
           <span>{cityWeather.current.temp_c}°C</span>
         </div>
